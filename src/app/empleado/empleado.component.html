@@ -2,8 +2,24 @@
     <h3>Nombre: {{nombre}}</h3>
     <h3>Apellido: {{apellido}}</h3>
     <h3>Edad: {{getEdad()}}</h3>
-    <h3>Subsede Empresa: {{empresa.value}}</h3>
-    <input type="text" #empresa (keyup)="0">
+    <h3>Subsede Empresa: {{empresa}}</h3>
+    <br>
+
+    <!-- Cambio directamente desde el Imput -->
+    <!-- <input type="text" #empresa (keyup)="0" [disabled]="!stateDisabled"> -->
+    <!-- Cambio desde el boton -->
     <!-- <input type="button" (click)="changeEmpresa(empresa.value)" value="Cambiar Empresa"> -->
+    <!-- Binding two way -->
+    Introduce el Nombre de la Empresa <input type="text" [(ngModel)]="empresa">
+    <hr>
+    {{textoRegistro}}<br>
+    {{textoSaludo}}<br>
+    Registrado:  <input type="radio" value="yes" name="nRegistro" (click)="verificarRegistro($event)"><br>
+    NoRegistrado: <input type="radio" value="no" name="nRegistro" (click)="verificarRegistro($event)"><br>
+
+   
+    
+
+
 </div>
 

@@ -1,0 +1,16 @@
+<div class="container">
+    <h3>First value</h3>
+        <input type="number" value="first" [(ngModel)] = "first">
+    <h3>Second value</h3>
+        <input type="number" value="second" [(ngModel)] = "second">
+        <hr>
+        <br>
+        <input type="button" value="sumar" (click)="sumar($event)">
+        <input type="button" value="restar" (click)="restar($event)">
+        <input type="button" value="multiplicar" (click)="multiplicar($event)">
+        <input type="button" value="dividir" (click)="dividir($event)">
+        <hr>
+        <h3>Resultado: <input type="text" [(ngModel)] = "resultado || exception" disabled="true"></h3>
+        <hr>
+        <input type="button" value="reset" (click)="reset($event)">
+</div>
