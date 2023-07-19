@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>{{titulo}}</h1>
+    <hr>
+    <form action="" >
+        <h3>Ingrese su Nombre y Apellido</h3>
+        <br>
+        <input type="text" name="nombre" [(ngModel)]="nombre" >
+        <br>
+        <h3>Ingrese su Mensaje</h3>
+        <br>
+        <input type="text" name="mensaje" [(ngModel)]="mensaje">
+        <br>
+        <hr>
+        <input type="submit" value="Send Message" (click)="enviarFormulario($event)">
+        <h3 *ngIf="registro">Gracias: {{nombre}}, por dejar el siguiente mensaje: {{mensaje}}, pronto nos pondremos en contacto</h3>
+    </form>
+    
+</div>
